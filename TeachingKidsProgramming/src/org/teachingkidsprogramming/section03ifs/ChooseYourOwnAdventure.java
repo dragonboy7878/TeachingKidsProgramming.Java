@@ -48,20 +48,27 @@ public class ChooseYourOwnAdventure
     MessageBox.showMessage(
         "You approach a glowing, green bucket of ooze. Worried that you will get in trouble, you pick up the bucket.");
     //         Ask the user "Do you want to pour the ooze into the 'backyard' or 'toilet'?" --#7
-    MessageBox.askForTextInput("Do you want to pour the ooze into the 'backyard' or 'toilet'?");
+    if (askAQuestion("Do you want to pour the ooze into the 'backyard' or 'toilet'?") == "toilet")
+      ;
     //         If they answer "toilet" --#8.1
-    //            pourIntoToilet (recipe below) --#12.1
-    //            ------------- Recipe for pourIntoToilet --#12.2
-    //               Tell the user "As you pour the ooze into the toilet it backs up, gurgles, and explodes, covering you in radioactive waste." --#10
-    //               Ask the user "Do you want to train to be a NINJA?  'Yes' or 'HECK YES'?" --#11
-    //               If they answer "yes" --#13.1
-    //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#14
-    //               Otherwise, if they answer "heck yes" --#13.2
-    //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#15
-    //               Otherwise, if they answer anything else --#13.3
-    //                    endStory --#16
-    //            ------------- End of pourIntoToilet recipe --#12.3
-    //         Otherwise, if they answer "backyard" --#8.2
+    askAQuestion("toilet");
+    {
+      //            pourIntoToilet (recipe below) --#12.1
+      //            ------------- Recipe for pourIntoToilet --#12.2
+      //               Tell the user "As you pour the ooze into the toilet it backs up, gurgles, and explodes, covering you in radioactive waste." --#10
+      //               Ask the user "Do you want to train to be a NINJA?  'Yes' or 'HECK YES'?" --#11
+      //               If they answer "yes" --#13.1
+      //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#14
+      //               Otherwise, if they answer "heck yes" --#13.2
+      //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#15
+      //               Otherwise, if they answer anything else --#13.3
+      //                    endStory --#16
+      //            ------------- End of pourIntoToilet recipe --#12.3
+    }
+    //         Otherwise, if they answer "backyard" --#8.2  
+    if (askAQuestion("Do you want to pour the ooze into the 'backyard' or 'toilet'?") == "backyard")
+    {
+    }
     //            pourIntoBackyard (recipe below) --#19.1
     //            ------------- Recipe for pourIntoBackyard --#19.2
     //                Tell the user "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water." --#17
