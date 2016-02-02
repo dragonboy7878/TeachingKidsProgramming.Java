@@ -3,6 +3,7 @@ package org.teachingkidsprogramming.section04mastery;
 import org.teachingextensions.logo.Tortoise;
 import org.teachingextensions.logo.utils.ColorUtils.ColorWheel;
 import org.teachingextensions.logo.utils.ColorUtils.PenColors.Blues;
+import org.teachingextensions.logo.utils.ColorUtils.PenColors.Purples;
 
 public class PentagonCrazy
 {
@@ -53,10 +54,13 @@ public class PentagonCrazy
     //    Add steel blue to the color wheel --#7
     ColorWheel.addColor(Blues.SteelBlue);
     //    Add dark orchid to the color wheel --#11
-    ColorWheel.addColor();
+    ColorWheel.addColor(Purples.DarkOrchid);
     //    Add dark slate blue to the color wheel --#12
+    ColorWheel.addColor(Blues.SlateBlue);
     //    Add teal to the color wheel --#13
+    ColorWheel.addColor(Blues.Teal);
     //    Add indigo to the color wheel --#14
+    ColorWheel.addColor(Purples.Indigo);
     //    ------------- End of createColorPalette recipe --#8.3
   }
 }

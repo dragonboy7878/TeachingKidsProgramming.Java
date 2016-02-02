@@ -48,14 +48,15 @@ public class ChooseYourOwnAdventure
     MessageBox.showMessage(
         "You approach a glowing, green bucket of ooze. Worried that you will get in trouble, you pick up the bucket.");
     //         Ask the user "Do you want to pour the ooze into the 'backyard' or 'toilet'?" --#7
-    if (askAQuestion("Do you want to pour the ooze into the 'backyard' or 'toilet'?") == "toilet")
-      ;
+    String pour = askAQuestion("Do you want to pour the ooze into the 'backyard' or 'toilet'?");
     //         If they answer "toilet" --#8.1
-    askAQuestion("toilet");
+    if (pour.equalsIgnoreCase("toilet"))
     {
       //            pourIntoToilet (recipe below) --#12.1
       //            ------------- Recipe for pourIntoToilet --#12.2
       //               Tell the user "As you pour the ooze into the toilet it backs up, gurgles, and explodes, covering you in radioactive waste." --#10
+      MessageBox.showMessage(
+          "As you pour the ooze into the toilet it backs up, gurgles, and explodes, covering you in radioactive waste.");
       //               Ask the user "Do you want to train to be a NINJA?  'Yes' or 'HECK YES'?" --#11
       //               If they answer "yes" --#13.1
       //                    Tell the user "Awesome dude!  You live out the rest of your life fighting crimes and eating pizza!" --#14
@@ -66,23 +67,27 @@ public class ChooseYourOwnAdventure
       //            ------------- End of pourIntoToilet recipe --#12.3
     }
     //         Otherwise, if they answer "backyard" --#8.2  
-    if (askAQuestion("Do you want to pour the ooze into the 'backyard' or 'toilet'?") == "backyard")
+    else if (askAQuestion("Do you want to pour the ooze into the 'backyard' or 'toilet'?") == "backyard")
     {
+      //            pourIntoBackyard (recipe below) --#19.1
+      //            ------------- Recipe for pourIntoBackyard --#19.2
+      //                Tell the user "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water." --#17
+      //                Ask the user "As the man starts to prepare you as soup, do you...'Scream' or 'Faint'?" --#18
+      //                If they answer "faint" --#20.1
+      //                        Tell the user "You made a delicious soup! Yum! The end." --#21
+      //                Otherwise, if they answer "scream" --#20.2
+      //                    startStory --#22
+      //                Otherwise, if they answer anything else --#20.3
+      //                    endStory --#23
+      //         ------------- End of pourIntoBackyard recipe --#19.3
     }
-    //            pourIntoBackyard (recipe below) --#19.1
-    //            ------------- Recipe for pourIntoBackyard --#19.2
-    //                Tell the user "As you walk into the backyard a net scoops you up and a giant takes you to a boiling pot of water." --#17
-    //                Ask the user "As the man starts to prepare you as soup, do you...'Scream' or 'Faint'?" --#18
-    //                If they answer "faint" --#20.1
-    //                        Tell the user "You made a delicious soup! Yum! The end." --#21
-    //                Otherwise, if they answer "scream" --#20.2
-    //                    startStory --#22
-    //                Otherwise, if they answer anything else --#20.3
-    //                    endStory --#23
-    //         ------------- End of pourIntoBackyard recipe --#19.3
     //         Otherwise, if they answer anything else --#8.3
-    //            endStory --#9
-    //      ------------- End of approachOoze recipe --#4.3
+    else
+    {
+      //            endStory --#9
+      endStory();
+      //      ------------- End of approachOoze recipe --#4.3
+    }
   }
   private static void wakeUp()
   {
