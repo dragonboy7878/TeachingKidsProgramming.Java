@@ -1,5 +1,6 @@
 package org.teachingkidsprogramming.section04mastery;
 
+import org.teachingextensions.logo.Tortoise;
 import org.teachingkidsprogramming.recipes.quizzes.graders.PentagonCrazyQuizGrader;
 import org.teachingkidsprogramming.recipes.quizzes.graders.PentagonQuizAdapter;
 
@@ -11,6 +12,7 @@ public class PentagonCrazyQuiz extends PentagonQuizAdapter
     //   createAStitch (recipe below) 
     //   ------------- Recipe for createAStitch
     //   Move the tortoise 6 pixels
+    Tortoise.move(6);
     //   ------------- End of createAStitch recipe
   }
   @Override
